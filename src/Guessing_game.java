@@ -21,16 +21,23 @@ public class Guessing_game {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Where is the index of number 5 from 0 - 9?");
 		int y;
+		boolean result = new Boolean(true);
 		for (int x =  0; x < 3; x++) {
 			System.out.print("It's: ");
 			y = sc.nextInt(10);
-			if (y == ind) {
-				System.out.println("You got a prize!");
+			if(y < 0 || y > 10) {
+				System.out.println("The value is between 0 - 9!");
+			}else if (y == ind) {
+				result = true;
 				break;
 			}else
 				System.out.println("Its not correct, please try again");
+				result = false;
 		}
-		
+		if (result) {
+			System.out.println("You got a prize!");
+		}else 
+			System.out.println("You dont got a prize!");
 		System.out.println("Here is the shuffled ArrayList!\n"+arrOfInt);
 	}
 
