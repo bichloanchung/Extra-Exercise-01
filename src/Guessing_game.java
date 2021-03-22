@@ -11,16 +11,27 @@ public class Guessing_game {
 		}
 		System.out.println(arrOfInt);
 		Collections.shuffle(arrOfInt);
-		int ind;
+		int ind = -1;
 		for (int id = 0; id < arrOfInt.size(); id++) {
 			if (arrOfInt.get(id) == 5) {
 				ind = id;
-				System.out.println(ind);
+				//System.out.println(ind);
 			}	
 		}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Where is the index of number 5 from 0 - 9?");
+		int y;
+		for (int x =  0; x < 3; x++) {
+			System.out.print("It's: ");
+			y = sc.nextInt(10);
+			if (y == ind) {
+				System.out.println("You got a prize!");
+				break;
+			}else
+				System.out.println("Its not correct, please try again");
+		}
 		
-		
-		//System.out.println(arrOfInt);
+		System.out.println("Here is the shuffled ArrayList!\n"+arrOfInt);
 	}
 
 }
