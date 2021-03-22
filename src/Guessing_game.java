@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Guessing_game {
 
@@ -10,7 +11,16 @@ public class Guessing_game {
 		}
 		System.out.println(arrOfInt);
 		Collections.shuffle(arrOfInt);
-		System.out.println(arrOfInt);
+		int ind;
+		for (int id = 0; id < arrOfInt.size(); id++) {
+			if (arrOfInt.get(id) == 5) {
+				ind = id;
+				System.out.println(ind);
+			}	
+		}
+		
+		
+		//System.out.println(arrOfInt);
 	}
 
 }
